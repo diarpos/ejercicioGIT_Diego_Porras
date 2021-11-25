@@ -64,6 +64,38 @@ function validarPalindromo(cadena) {
 }
 
 validarPalindromo("larutanosaportootropasonatural")
+
+// Punto 5
+class Persona{
+    nombre;
+    edad;
+
+    constructor(nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    obtDetalles(){
+        console.log(this.nombre);
+        console.log(this.edad);
+    }
+}
+
+class Estudiante extends Persona {
+    calificacion;
+
+    obtDetalles(){
+        console.log(super.obtDetalles());
+        console.log(this.calificacion);
+    }
+}
+
+
+persona1 = new Persona("diego", "39")
+persona1.obtDetalles();
+
+estudiante1 = new Estudiante("gloria", "38", "4.5")
+estudiante1.obtDetalles();
 </script>
 </body>
 </html>
