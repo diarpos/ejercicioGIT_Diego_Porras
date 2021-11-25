@@ -84,18 +84,50 @@ class Persona{
 class Estudiante extends Persona {
     calificacion;
 
+    constructor(nombre, edad, calificacion){
+        super(nombre, edad);
+        this.calificacion = calificacion;
+    }
+
     obtDetalles(){
         console.log(super.obtDetalles());
         console.log(this.calificacion);
     }
 }
 
+class Profesor extends Persona {
+    asignatura="";
+    nivel="";
+
+    constructor(nombre, edad){
+        super(nombre, edad);
+        this.asignatura = "JS";
+        this.nivel = "basico";
+    }
+
+    obtDetalles(){
+        console.log(super.obtDetalles());
+        console.log(this.asignatura);
+        console.log(this.nivel);
+    }
+}
+
+class Grupo  {
+    profesor=;
+    promedio=;
+    estudiantes;
+
+}
 
 persona1 = new Persona("diego", "39")
 persona1.obtDetalles();
 
 estudiante1 = new Estudiante("gloria", "38", "4.5")
 estudiante1.obtDetalles();
+
+profesor1 = new Profesor("Juan", "40", "", "")
+profesor1.obtDetalles();
+
 </script>
 </body>
 </html>
