@@ -50,7 +50,20 @@ function numeroParImpar(numero) {
 
 numeroParImpar(4)
 
+// Punto 4
+function validarPalindromo(cadena) {
+    let cadenaRevertida = "";
+    cadenaRevertida=cadena.split("");
+    cadenaRevertida=cadenaRevertida.reverse();
+    cadenaRevertida=cadenaRevertida.join("");
+    if(cadena === cadenaRevertida) {
+        console.log(cadena + " es Palindroma")
+    }else{
+        console.log(cadena + " no es Palindroma")
+    }
+}
 
+validarPalindromo("larutanosaportootropasonatural")
 </script>
 </body>
 </html>
