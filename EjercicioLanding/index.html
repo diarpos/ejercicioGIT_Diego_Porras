@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Landing Venn</title>
-    <link href="main.css" rel="stylesheet">
+    <title>Landin Venn</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 
 </head>
 <body>
-<div id="seccionPrincipal">
+<div id="seccion1">
     <img id="logoVenn" src="img/Grupo%206579.webp">
     <h1>
-        Bienvenido a un espacio donde tu conocmiento <br> se transforma en tu nuevo negocio
+        Bienvenido a un espacio donde tu conocmiento <br>se transforma en tu nuevo negocio
     </h1>
     <button> Crea tu cuenta gratis</button>
     <div id="tarjeta">
         <img src="img/AndreaV-web.png">
         <h3>Patricia Weil</h3>
-        <h5>Psicología </h5>
-        <p>Tenía tiempo buscando una plataforma en donde hacer mis talleres, lo acabo de hacer en Venn. Si eres terapeuta y
-            estás buscando una plataforma que funcione sin VPN, ésta funciona muy bien, fue una experiencia bellísima y el
-            grupo estuvo buenísimo! Amo mi trabajo.</p>
+        <h5>Psicología</h5>
         <div class="estrellas">
             <img src="img/star.webp" alt="">
             <img src="img/star.webp" alt="">
@@ -31,10 +28,21 @@
             <img src="img/star.webp" alt="">
             <img src="img/star.webp" alt="">
         </div>
+        <p>Tenía tiempo buscando una plataforma en donde hacer mis talleres, lo acabo de hacer en Venn. Si eres terapeuta y
+            estás buscando una plataforma que funcione sin VPN, ésta funciona muy bien, fue una experiencia bellísima y el
+            grupo estuvo buenísimo! Amo mi trabajo.</p>
+
     </div>
 </div>
 
-<h2>Herramientas apra crear tu curso onlineff</h2>
+
+
+
+
+
+
+<!--Segunda seccion de la pagina-->
+<h2>Herramientas apra crear tu curso online</h2>
 
 <div id="tarjetas">
     <div class="tarjetaProductos">
@@ -75,51 +83,55 @@
 
 <h2>Somos una plataforma
     que lo tiene todo</h2>
-<!--Fila 1-->
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207051.webp">
-    <p>Creacion de prodcutos gratuitos</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207056.webp">
-    <p>Cursos Pre Grabados ilimitados</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207047.webp">
-    <p>Sesiones en Vivo
-        ilimitadas</p>
+
+<div class="cuadricula">
+    <!--Fila 1-->
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207051.webp">
+        <p>Creacion de prodcutos <span class="negritas">gratuitos</span></p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207056.webp">
+        <p>Cursos Pre Grabados <span class="negritas">ilimitados</span></p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207047.webp">
+        <p>Sesiones en Vivo<br>
+            <span class="negritas">ilimitadas</span></p>
+    </div>
+
+    <!--Fila dos -->
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207049.webp">
+        <p>Mentorías 1 a 1
+            ilimitadas</p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207058.webp">
+        <p>Descarga tu base de datos con sólo un clic</p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207053.webp">
+        <p>Plataforma de video integrada</p>
+    </div>
+
+    <!--Fila tres -->
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207048.webp">
+        <p>Grabación de tus Sesiones en Vivo</p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207057.webp">
+        <p>Generación de certificados automáticos</p>
+    </div>
+    <div class="tarjetaCaracteristica">
+        <img src="img/Grupo%207054.webp">
+        <p>Plataforma de pago integrada (Stripe/Paypal)</p>
+    </div>
 </div>
 
-<!--Fila dos -->
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207049.webp">
-    <p>Mentorías 1 a 1
-        ilimitadas</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207058.webp">
-    <p>Descarga tu base de datos con sólo un clic</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207053.webp">
-    <p>Plataforma de video integrada</p>
-</div>
-
-<!--Fila tres -->
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207048.webp">
-    <p>Grabación de tus Sesiones en Vivo</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207057.webp">
-    <p>Generación de certificados automáticos</p>
-</div>
-<div class="tarjetaCaracteristica">
-    <img src="img/Grupo%207054.webp">
-    <p>Plataforma de pago integrada (Stripe/Paypal)</p>
-</div>
 <!--Fila cuatro -->
-<button> Crea tu cuenta gratis</button>
+<button id="ultimoBoton"> Crea tu cuenta gratis</button>
 
 <footer>
     <img src="img/Logo_venn_footer.webp">
