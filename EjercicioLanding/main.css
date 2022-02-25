@@ -269,7 +269,7 @@ body {
         display: grid;
         grid-template-columns:1fr 1fr;
     }
-    #seleccionadorTarjeta, #seleccionadorTarjetaProducto {
+    #seleccionadorTarjeta, #seleccionadorTarjetaProducto, div.tarjetaProductosMin {
         display: none;
         background-position: top center;
     }
