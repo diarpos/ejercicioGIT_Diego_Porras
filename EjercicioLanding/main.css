@@ -98,6 +98,10 @@ body {
     max-height: 20px;
 }
 
+#seleccionadorTarjeta {
+    display: block;
+}
+
 #tarjetas {
     width: 1000px;
     height: 500px;
@@ -180,7 +184,7 @@ body {
 .cuadricula{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1024px;
+    max-width: 600px;
     margin: auto;
     gap: 35px;
     justify-content: center;
@@ -257,14 +261,19 @@ body {
     color: #fff;
     grid-column: 4;
 }
-
+@media only screen and (min-width:320px) {
+    
+}
 @media screen and (min-width:320px) {
     .cuadricula {
         display: grid;
         grid-template-columns:1fr 1fr;
     }
+    #seleccionadorTarjeta, #seleccionadorTarjetaProducto {
+        display: none;
+        background-position: top center;
+    }
 }
-
 
 @media only screen and (max-width:320px) {
     #tarjetas {
