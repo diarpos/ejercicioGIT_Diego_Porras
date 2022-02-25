@@ -36,6 +36,7 @@ button:hover{
 
 body {
     margin: 0;
+    
 }
 
 #logoVenn {
@@ -51,6 +52,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     padding-bottom: 120px;
+    width: 100%;
 }
 
 #tarjeta {
