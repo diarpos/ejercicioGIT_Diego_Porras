@@ -7,41 +7,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    
+   <!--- <link href="main.css" rel="stylesheet"> -->
+   <link href="main.css" rel="stylesheet">
+
 </head>
 <body>
 <div id="seccion1">
     <img id="logoVenn" src="img/Grupo%206579.webp">
-    <h1>
-        Bienvenido a un espacio donde tu conocmiento <br>se transforma en tu nuevo negocio
+    <h1 class="slide-right">
+        Comparte tu conocimiento en línea
     </h1>
-    <button> Crea tu cuenta gratis</button>
-    <div id="tarjeta">
-        <img src="img/AndreaV-web.png">
-        <h3>Patricia Weil</h3>
-        <h5>Psicóloga</h5>
-        <div class="estrellas">
-            <img src="img/star.webp" alt="">
-            <img src="img/star.webp" alt="">
-            <img src="img/star.webp" alt="">
-            <img src="img/star.webp" alt="">
-            <img src="img/star.webp" alt="">
-        </div>
-        <p>Tenía tiempo buscando una plataforma en donde hacer mis talleres, lo acabo de hacer en Venn. Si eres terapeuta y
-            estás buscando una plataforma que funcione sin VPN, ésta funciona muy bien, fue una experiencia bellísima y el
-            grupo estuvo buenísimo! Amo mi trabajo.</p>
+    <p style="text-align: center;">Bienvenido a Venn, una plataforma para dar cursos online con todas las opciones que necesitas para enseñar en línea, </p>
+    <h3 style="color: #1489ff; text-align: center;">
+        ¡Crea tu cuenta gratuita!
+    </h3>
 
+    <button> Crea tu cuenta gratis</button>
+    <div id="tarjetaGeneral">
+        <div class="tarejtaIzquierda">
+            <img src="img/Grupo 6987_2.webp" alt="" onclick="izquierda()">
+        </div>
+        <div id="tarjeta">
+            <!-- <img src="img/AndreaV-web.png"> -->
+            <img src="https://comunidad.venntors.com/wp-content/uploads/2021/12/Paty_web.png">
+            <h3>Patricia Weil</h3>
+            <h5>Psicóloga</h5>
+            <div class="estrellas">
+                <img src="img/star.webp" alt="">
+                <img src="img/star.webp" alt="">
+                <img src="img/star.webp" alt="">
+                <img src="img/star.webp" alt="">
+                <img src="img/star.webp" alt="">
+            </div>
+            <p>Tenía tiempo buscando una plataforma en donde hacer mis talleres, lo acabo de hacer en Venn. Si eres terapeuta y
+                estás buscando una plataforma que funcione sin VPN, ésta funciona muy bien, fue una experiencia bellísima y el
+                grupo estuvo buenísimo! Amo mi trabajo.</p>
+        </div>
+        <div class="tarejtaDerecha">
+            <img src="img/Grupo 6987.webp" alt="" onclick="derecha()">
+        </div>
     </div>
-    <div id="seleccionadorTarjeta">
-        <input type="radio" name="seleccionadorTarjeta1">
-        <input type="radio" name="seleccionadorTarjeta2">
-        <input type="radio" name="seleccionadorTarjeta3">
-        <input type="radio" name="seleccionadorTarjeta4">
-        <input type="radio" name="seleccionadorTarjeta5">
-        <input type="radio" name="seleccionadorTarjeta6">
-        <input type="radio" name="seleccionadorTarjeta7">
-    </div>
+    
 </div>
 
 <!--Segunda seccion de la pagina-->
@@ -71,32 +77,34 @@
         <p> Tiempo exclusivo para trabajar de <br>
             forma individual con tu aprendiz.</p>
     </div>
-    <div class="tarjetaProductosMin">
-        <img src="img/pantallas/Sesiones_Vivox2.png" alt="">
-        <h5>Sesiones en vivo</h5>
-        <p>Un espacio para enseñar <br> 
-            y resolver dudas al momento. </p>
+</div>
+
+<div id="tarjetasChico">
+    <div id="tarjetaProductosChico">
+        <div class="productosChico">
+            <img src="img/pantallas/Sesiones_Vivox2.png" alt="">
+            <h5>Sesiones en vivo</h5>
+            <p>Un espacio para enseñar y resolver dudas al momento. </p>
+        </div>
     </div>
-    <div id="seleccionadorTarjetaProducto">
-        <input type="radio" name="seleccionadorTarjetaProducto1">
-        <input type="radio" name="seleccionadorTarjetaProducto2">
-        <input type="radio" name="seleccionadorTarjetaProducto3">
+    <div id="radios">
+        <input type="radio" name="radioSeleccion">
+        <input type="radio" name="radioSeleccion">
+        <input type="radio" name="radioSeleccion">
     </div>
 </div>
 
 <button id="ultimoBoton"> Crea tu cuenta gratis</button>
 
 <h2>Es un proceso muy simple</h2>
-<div id="enrolar">
-    
+<div id="enrolar">  
     <!--Fila 1-->
     <div class="numeros">
         <img src="img/Grupo%207020.webp">
         <img src="img/Grupo%207022.webp">
         <img src="img/Grupo%207021.webp">
-        
     </div>
- 
+
     <!--Fila 2-->
     <div class="procesos">
         <img src="img/Grupo%209210.webp">
@@ -110,109 +118,135 @@
         <h3>Completa tu perfil</h3>
         <h3>Crea tu curso online</h3>
     </div>
-    
 </div>
+<div id="enrolarChico"> 
+    <div id="tarjetaEnrolarChico">
+        <div class="procesosChico">
+            <img src="img/Grupo%209210.webp">
+        </div>
+        <div class="descripcionesChico">
+            Crea tu cuenta
+        </div>
+    </div> 
+    
+    <div class="numerosChico">
+        <img src="img/numerosChico.webp">
+    </div>
+</div>
+
 <button id="ultimoBoton"> Crea tu cuenta gratis</button>
 
-
-
 <div id="seccionCuadricula">
-    <div>
-        <h2>Somos una plataforma <br>
-            que lo tiene todo</h2>
-    </div>      
-
-    <div class="cuadricula">
-        <!--Fila 1-->
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207051.webp">
-            <p>Creacion de prodcutos <span class="negritas"> <br>gratuitos</span></p>
+    <div id="cuadriculaSuperior">
+        <div id="leyendaCuadricula">
+            <h2>Somos una plataforma que lo <br>tiene todo</h2>
         </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207056.webp">
-            <p>Cursos Pre Grabados <span class="negritas"> <br>ilimitados</span></p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207047.webp">
-            <p>Sesiones en Vivo<br>
-                <span class="negritas">ilimitadas</span></p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207049.webp">
-            <p>Mentorías 1 a 1 <span class="negritas"><br>ilimitadas</span></p>
-                
-        </div>
-    
-        <!--Fila dos -->
+        <div class="cuadricula">
+            <!--Fila 1-->
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207051.webp">
+                <p>Creacion de prodcutos <span class="negritas"> <br>gratuitos</span></p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207056.webp">
+                <p>Cursos Pre Grabados <span class="negritas"> <br>ilimitados</span></p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207047.webp">
+                <p>Sesiones en Vivo<br>
+                    <span class="negritas">ilimitadas</span></p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207049.webp">
+                <p>Mentorías 1 a 1 <span class="negritas"><br>ilimitadas</span></p>
+                    
+            </div>
         
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207058.webp">
-            <p><span class="negritas">Descarga tu base de datos</span> 
-                <br>con sólo un clic</p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207053.webp">
-            <p>Plataforma de video <span class="negritas">integrada</span></p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207048.webp">
-            <p><span class="negritas">Grabación</span> de tus Sesiones <br>en Vivo</p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207057.webp">
-            <p>Generación de certificados <span class="negritas"><br>automáticos</span></p>
-        </div>
-        <!--Fila tres -->
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo%207054.webp">
-            <p>Plataforma de pago <span class="negritas"><br>integrada (Stripe/Paypal)</span></p>
-        </div>
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo 7050.webp">
-            <p>Sincronización de <span class="negritas">husos <br>horarios</span></p> 
-        </div>
-        
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo 7055.webp">
-            <p><span class="negritas">Envío de correos</span> masivos a <br>
-            tu base de datos</p>
-        </div>
-        
-        <div class="tarjetaCaracteristica">
-            <img src="img/Grupo 7052.webp">
-            <p><span class="negritas">Recordatorios automáticos </span><br>
-            para eventos en vivo</p>
+            <!--Fila dos -->
+            
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207058.webp">
+                <p><span class="negritas">Descarga tu base de datos</span> 
+                    <br>con sólo un clic</p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207053.webp">
+                <p>Plataforma de video <span class="negritas">integrada</span></p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207048.webp">
+                <p><span class="negritas">Grabación</span> de tus Sesiones <br>en Vivo</p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207057.webp">
+                <p>Generación de certificados <span class="negritas"><br>automáticos</span></p>
+            </div>
+            <!--Fila tres -->
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo%207054.webp">
+                <p>Plataforma de pago <span class="negritas"><br>integrada (Stripe/Paypal)</span></p>
+            </div>
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo 7050.webp">
+                <p>Sincronización de <span class="negritas">husos <br>horarios</span></p> 
+            </div>
+            
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo 7055.webp">
+                <p><span class="negritas">Envío de correos</span> masivos a <br>
+                tu base de datos</p>
+            </div>
+            
+            <div class="tarjetaCaracteristica">
+                <img src="img/Grupo 7052.webp">
+                <p><span class="negritas">Recordatorios automáticos </span><br>
+                para eventos en vivo</p>
+            </div>
         </div>
     </div>
+    
 </div>
 
 
 <!--Fila cuatro -->
 <button id="ultimoBoton"> Crea tu cuenta gratis</button>
 
-<footer>
-    <div id="footer">
-        <div class="imagenVenn">
-            <img src="img/Logo_venn_footer.webp">
+<footer id="footer">
+    <div id="footerGeneral">
+        <div id="footer1">
+            <div class="imagenVenn">
+                <span class="spImagenVenn">
+                    <img src="https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14162225/Logo_venn_footer.svg">
+                </span>
+            </div>
+            <!--Redes sociales-->
+            <div class="imagenRedesSociales">
+                <img src="https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14165140/001-facebook.svg">
+                <img src="https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14165141/003-instagram.svg">
+                <img src="img/002-linkedin.webp">
+                <img src="img/twitter-1.webp">
+                <img src="img/youtube_venn_footer.webp">
+                <img src="img/tiktok.webp">
+            </div>
         </div>
-        <!--Redes sociales-->
-        <div class="imagenRedes">
-            <img src="https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14165140/001-facebook.svg">
-            <img src="img/003-instagram.webp">
-            <img src="img/002-linkedin.webp">
-            <img src="img/twitter-1.webp">
-            <img src="img/youtube_venn_footer.webp">
-            <img src="img/tiktok.webp">
+        <div id="footer2">
+            <div class="politicas">
+                <p>Políticas de privacidad</p>
+                <p>Términos y condiciones</p>
+                <p>© Venn 2021</p>
+            </div>
         </div>
-        
-        <div class="politicas">
-            <div class="politica1"><img src="img/Políticas de Privacidad.webp"></div>
-            <div class="politica2"><img src="img/Términos y Condiciones.webp"></div>
-            <div class="politica3">&copy; <img src="img/Venn 2021.webp"></div>
-        </div>
-        
     </div>
     
 </footer>
+<script>
+    function derecha() {
+        document.getElementById('tarjeta').classList.add('slide-right');
+    }
+
+    function izquierda() {
+        document.getElementById('tarjeta').classList.add('slide-left');
+    }
+</script>
 </body>
 </html>

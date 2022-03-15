@@ -1,7 +1,16 @@
 html {
     font-family: Hind;
     color: #002B39;
-    width:100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -11,32 +20,88 @@ h1, h2 {
     font-style: normal;
     text-align: center;
 }
+.slide-right {
+	-webkit-animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-iteration-count: 3;
+}
+@-webkit-keyframes slide-right {
+    0% {
+        opacity: 0;
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+        opacity: 0;
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
 
+.slide-left {
+	-webkit-animation: slide-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-iteration-count: 1;
+}
+@-webkit-keyframes slide-left {
+    0% {
+        opacity: 0;
+      -webkit-transform: translateX(100px);
+              transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+        opacity: 0;
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }  
 
 button {
-    color: #fff;
+    color: #ffffff;
     box-shadow: 0 9px 12px 0 rgba(153, 176, 190, 0.35);
-    background-image: linear-gradient(0deg, #007fff 0%, #00b1ff 100%);
-    font-weight:700px;
-    font-size:18px;
+    /*background-image: linear-gradient(0deg, #007fff 0%, #00b1ff 100%);*/
+    background-color: #007fff;
+    font-weight: 700;
+    font-size: 18px;
     border-width: 0px;
     border-radius: 5px;
     padding: 15px 45px 11px 46px;
     display: block;
     margin: auto;
+    margin-bottom: 50px;
     cursor: pointer;
+    transition: background-color 6s;
 }
 button:hover{
     color: blue;
     background: white;
-    border-width:1px;
-    border-botton-color:blue;
+    border-width: 1px;
+    border-bottom-color: blue !important;
     box-shadow: none;
-}
-
-body {
-    margin: 0;
-    
 }
 
 #logoVenn {
@@ -51,24 +116,38 @@ body {
     background-image: url("img/Grupo 9213.webp");
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: cover;
     padding-bottom: 120px;
-    width: 100%;
+    max-width: 100%;
 }
-
+#tarjetaGeneral {
+    height: 350px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+#tarjetaGeneral > .tarejtaIzquierda {
+    grid-column: 1;
+}
+#tarjetaGeneral > .tarejtaDerecha {
+    grid-column: 3;
+}
 #tarjeta {
-    padding-top: 18px;
+    grid-column: 2;
+    padding-top: 0px;
     height: 280px;
     max-width: 700px;
     box-shadow: 0 25px 35px 0 rgba(26, 72, 100, 0.2);
     border: solid 1px #dfeaf0;
     background-image: linear-gradient(to bottom, #fff, #fff 76%, #f0faff);
     margin: auto;
-    margin-top: 51px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: 50px 30px;
     border-radius: 5px;
-    
 }
 
 #tarjeta >img{
@@ -100,31 +179,24 @@ body {
     max-height: 20px;
 }
 
-#seleccionadorTarjeta {
-    display: block;
-}
-
 #tarjetas {
-    width: 1000px;
+    width: 100%;
     height: 500px;
     margin: auto;
-    margin-top: 51px;
+    margin-top: 0px;
     padding: 2px 10px 2px 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: none;
+    display: flex;
     gap: 30px;
-    background-color: rgba(227, 236, 241, 0.918);
-    box-shadow: 20px 100px 100px 20px rgba(227, 236, 241, 0.918);
+    align-items: center;
+    justify-content: center;
 }
 
-#tarjetas > .tarjetaProductos, .tarjetaProductosMin{
+#tarjetas > .tarjetaProductos{
     padding: 2px 10px 2px 10px;
     border-radius: 5px;
     background-color: #fff;
     width: 300px;
-    height: relative;
-   
+    box-shadow: 0 10px 30px 0 rgb(195 213 224 / 50%);
 }
 
 .tarjetaProductos > img{
@@ -137,15 +209,60 @@ body {
 .tarjetaProductos > h5{
     text-align: center;
     font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .tarjetaProductos > p{
     text-align: center;
 }
 
+#tarjetasChico {
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+    background-color: #fff;
+    display: block;
+}
+#tarjetaProductosChico {
+    
+    width: 100%;
+    max-width: 350px;
+    max-height: 390px;
+    padding: 2rem 2rem 5rem 2rem;
+    margin: auto;
+    box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%);
+    border-radius: 10px;
+}
+.productosChico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-height: 90%;
+    color: black;
+}
+.productosChico > img {
+    max-width: 350px;
+}
+.productosChico > h5 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+.productosChico > p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+}
+#radios{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 #enrolar{   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 600px;
+    width: 100%;
     margin: auto;
     gap: 20px;
     background-position: top center;
@@ -163,10 +280,15 @@ body {
     grid-column-start: 2;
     justify-content: space-around;
     padding-left: 10px;
+    background-image: url(https://comunidad.venntors.com/wp-content/uploads/2021/12/Rectangulo-7185403x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
 }
 .procesos > img:hover{
     color: white;
     background: blue;
+    background-image: url(https://comunidad.venntors.com/wp-content/uploads/2021/12/nuevo7023.svg);
 }
 
 #enrolar > .descripciones{
@@ -176,20 +298,75 @@ body {
     padding-left: 20px;
 }
 
-#seccionCuadricula{
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url("https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14122056/Enmascarar-grupo-285%403x-scaled.webp")
+#enrolarChico {
+    margin: auto;
+    max-width: 240px;
+    gap: 20px;
+    background-position: top center;
+    display: block;
+}
+#tarjetaEnrolarChico {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    width: 100%;
+    padding: 2rem 1rem 0 1rem;
+    background-color: #fff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%);
 }
 
+.numerosChico {
+    width: 100%;
+    padding-left: 10px;
+    background-size: cover;
+    background-position: top center;
+}
+.descripcionesChico {
+    display: flex;
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 981px) { 
+    #enrolarChico {
+        display: none; 
+    }
+    #tarjetasChico {
+        display: none; 
+    }
+
+}
+
+#seccionCuadricula{
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    padding: 50px 0;
+    background-image: url("https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/14122056/Enmascarar-grupo-285%403x-scaled.webp");
+    background-size: cover;
+}
+.cuadriculaSuperior {
+    
+    padding-bottom: 4px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    
+}
 .cuadricula{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 600px;
-    margin: auto;
-    gap: 35px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     justify-content: center;
+    width: 100%;
+    margin: auto;
+    gap: 30px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .tarjetaCaracteristica{
@@ -199,9 +376,7 @@ body {
     padding: 22px 5% !important;
     box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%) !important;
     border:solid 1px #dfeaf0;
-    width:280px ;
-    height: 145px;
-    box-sizing: border-box;
+    width: 90%;
 }
 
 .tarjetaCaracteristica:hover{
@@ -218,91 +393,118 @@ body {
     margin-bottom: 100px;
 }
 
-#footer{
-    display: grid;
-    grid-template-rows: 10% 1fr 10% 30%;
-    grid-template-columns: 1fr 1fr 3fr 2fr 1fr;
+#footer {
     background-image: linear-gradient(90deg,#1489ff 0%,#0073e6 100%)!important;
-}
+    width: 100%;   
+}    
 
-#footer > .imagenVenn{
-    padding-top: 30px;
-    grid-row: 1;
+#footerGeneral {
+    padding: 40px 140px; 
+}
+#footer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    align-items: center;
+}
+.imagenRedesSociales{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 20px;
+    height: 25px;
+    gap: 25px
+}
+#footer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 42px;
+    align-items: end;
+}
+.politicas{
     grid-column: 2;
-}
-
-#footer > .imagenRedes{
-    grid-template-columns: 2fr 3fr;
-    grid-column: 4;
-}
-
-.imagenRedes > img{
-    padding-top: 60px;
-    padding-left: 30px;
-    grid-column: 2; 
-    display: inline;
-    justify-self: center;
-}
-
-#footer > .politicas{
-    display: inline-grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
-    grid-row: 4;
-    gap: 40px;
-}
-
-#footer > .politicas > .politica1{
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%; 
+    gap: 25px;
+    font-size: 15px;
     color: #fff;
-    grid-column: 2;
+    text-align:center;
+    justify-items: end;
 }
-#footer > .politicas, .politica2{ 
-    color: #fff;
-    grid-column: 3;
-}
-#footer > .politicas, .politica3{ 
-    color: #fff;
-    grid-column: 4;
-}
-@media only screen and (min-width:320px) {
+
+@media only screen and (max-width: 980px) {    
+    #enrolar {
+        display: none; 
+    }
+    #tarjetas {
+        display: none; 
+    }
     
 }
-@media screen and (min-width:320px) {
+
+@media only screen and (max-width: 940px) {   
     .cuadricula {
         display: grid;
-        grid-template-columns:1fr 1fr;
-    }
-    #seleccionadorTarjeta, #seleccionadorTarjetaProducto, div.tarjetaProductosMin {
-        display: none;
-        background-position: top center;
-    }
-}
-
-@media only screen and (max-width:320px) {
-    #tarjetas {
-        display: grid;
-        grid-template-columns: 1fr;
-        
-    }
-    div.tarjetaProductosMin {
-        display: none;
-        grid-column:1;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
     } 
-    .tarjetaProductosMin > h5{
-        text-align: center;
-        font-size: 30px;
+}
+
+@media only screen and (max-width: 320px) { 
+    .cuadricula {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50%;
+        font-size: 15px;
+    }  
+    .tarjetaCaracteristica {
+        width: 90%;
     }
-    .tarjetaProductosMin > p{
+    .leyendaCuadricula {
         text-align: center;
-    }
-    .tarjetaProductos > img{
-        width: 300px;
-        height: 300px;
-        display: block;
+        font-size: clamp(30px,3.1vm,42pz);
     }
 }
 
-@media only screen and (max-width: 321px) {
-    div.tarjetaProductos{
-        display: screen;
+@media only screen and (max-width: 639px) {
+    #seccionCuadricula{
+        background-position: top center;
+        width: 100%;
+        padding: 50px 0;
+        background-image: url("https://venn-ws-bucket.s3.us-west-2.amazonaws.com/wp-content/uploads/2021/09/16123155/ld-divisor-movil.svg");
+        background-size: 100% 10px;
+    } 
+    #footerGeneral {
+        padding: 40px 60px; 
+        align-items: center;
     }
+    .imagenVenn {
+        grid-column: 2;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+    .imagenRedesSociales {
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        padding-left: 0px; 
+    }
+    .politicas {
+        grid-column: 1 / -1;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 390px) {   
+    .imagenRedesSociales {
+        gap: 5px 
+    }  
+}    
+
+@media only screen and (max-width: 290px) {   
+    .imagenRedesSociales {
+        gap: 0px 
+    }  
+
 }
