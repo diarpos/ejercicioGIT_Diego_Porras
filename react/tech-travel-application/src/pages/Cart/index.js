@@ -5,7 +5,11 @@ import { MdDelete } from 'react-icons/md'
 
 function Cart() {
     const { state, setState } = useContext(CartContext);
-    const TotalT = 0;
+    
+    const TotalT = state.cart.reduce(
+        (acc, travel) => acc + travel.quantity * travel.price, 0,
+    );
+
     return (
         <Container>
             <ContainerList>
@@ -30,12 +34,10 @@ function Cart() {
                         </Subtotal>
                     </TravelItem>
                 ))}
-                {state.cart.map((el) => (
                     <Total>
                         <span>TOTAL</span>
-                        <p>{el.quantity * el.price}</p>
+                        <p>{ TotalT }</p>
                     </Total>
-                ))}
             </ContainerList>
         </Container>
     )

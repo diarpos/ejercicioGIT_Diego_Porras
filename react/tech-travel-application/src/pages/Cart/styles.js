@@ -64,12 +64,12 @@ export const Info = styled.div`
 export const Quantity = styled.input`
     font-size: 16px;
     color: #666;
-    padding: 6px;
+    padding: 0px;
     border-radius: 5px;
     width: 40px;
-    height: 40px;
+    height: 30px;
     border: 1px solid #0676d9;
-    text-align: center;
+    text-align: right;
 `;
 
 export const Subtotal = styled.div`
